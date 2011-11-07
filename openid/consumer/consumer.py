@@ -1000,6 +1000,7 @@ class GenericConsumer(object):
         """
         # Every type URI that's in the to_match endpoint has to be
         # present in the discovered endpoint.
+        return None
         for type_uri in to_match.type_uris:
             if not endpoint.usesExtension(type_uri):
                 raise TypeURIMismatch(type_uri, endpoint)
